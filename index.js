@@ -141,6 +141,8 @@ MapboxglLayer.registerRenderer('dom', class {
             origin = new mapboxgl.LngLat(origin.x, origin.y);
             const cameraOptions = {
                 'around' : origin,
+                'bearing' : map.getBearing(),
+                'pitch' : map.getPitch(),
                 'duration' : 0
             };
             // use zoomTo instead of jumpTo, becos we need to set around to zoom around zoom origin point.
